@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Daily Journal</title>
+        <link rel="stylesheet" href="./styles/main.css">
+    </head>
+
+    <body>
+        <main id="container">
+            <header>
+                <img src="" alt="">
+                <h1>Daily Journal</h1>
+            </header>
+            <p class="name">Caleb James</p>
+            <section class="journalEntryNew">
+                <h2>New Entry</h2>
+                <form action="">
+                    <fieldset>
+                        <label for="journalDate">Date of Entry</label>
+                        <input type="date" name="journalDate" id="journalDate">
+                    </fieldset>
+                    <fieldset>
+                        <label for="journalConcepts">Concepts covered</label>
+                        <input type="text" name="journalConcepts" id="journalConcepts">
+                    </fieldset>
+                    <fieldset>
+                        <label for="journalEntry">Journal entry</label>
+                        <textarea rows=10 cols= 70 name="journalEntry" id="journalEntry"></textarea>
+                    </fieldset>
+                    <fieldset>
+                        <label for="journalMood">Current mood</label>
+                        <select name="journalMood" id="journalMood">
+                            <option value="rapturous">Rapturous</option>
+                            <option value="ecstatic">Ecstatic</option>
+                            <option value="joyful">Joyful</option>
+                            <option value="headBashhing">Bashing head against wall</option>
+                        </select>
+                    </fieldset>
+                    <button onclick="myFunction()">Record Journal Entry</button>
+
+                        <script>
+                        function myFunction() {
+                            var x = document.createElement("INPUT");
+                            x.setAttribute("type", "button");
+                            x.setAttribute("value", "New Journal Entry");
+                            document.body.appendChild(x);
+                        }
+                        </script>
+                </form>
+            </section>
+        </main>
+
+        <script type="module" src="./scripts/main.js"></script>
+    </body>
+</html>
