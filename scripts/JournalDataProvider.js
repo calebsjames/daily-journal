@@ -19,9 +19,9 @@ const journal = [
         id: 2,
         date: "01/16/2021",
         concept: "JS",
-        entry: "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
+        entry: "JS files are just great.",
         mood: "Bashing head against wall"
-    }, 
+    } 
 ]
 
 /*
