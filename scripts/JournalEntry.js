@@ -9,10 +9,10 @@ export const JournalEntryComponent = (entry) => {
         <section id="entry--${entry.id}" class="journalEntry">
             <div>${entry.date}</div>
             <div>${entry.concept}</div>
-            <div>${entry.entry}</div>
+            <div>${entry.text}</div>
             <div>${entry.mood}</div>
         </section>
     `
 }
 
-debugger
+// debugger

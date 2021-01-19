@@ -12,14 +12,14 @@ const journal = [
         id: 1,
         date: "01/14/2021",
         concept: "HTML & CSS",
-        entry: "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
+        text: "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
         mood: "Joyful"
     }, 
     {
         id: 2,
         date: "01/16/2021",
         concept: "JS",
-        entry: "JS files are just great.",
+        text: "JS files are just great.",
         mood: "Bashing head against wall"
     } 
 ]
