@@ -54,3 +54,9 @@ h1,h2,h3,h4,h5,h6 {
 	display: flex;
 	flex-direction: column;
 }
+
+.journalEntryOld {
+	padding: 8px;
+	border: solid black 2px;
+	margin: 8px 0px;
+}

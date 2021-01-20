@@ -22,7 +22,7 @@ export const EntryListComponent = () => {
     }
         
     entryLog.innerHTML += `
-        <article class="journalEntries">
+        <article class="journalEntriesOld">
         ${journalHTMLRepresentation}
         </article>
         `

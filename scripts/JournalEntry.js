@@ -6,7 +6,7 @@
 export const JournalEntryComponent = (entry) => {
     
     return `
-        <section id="entry--${entry.id}" class="journalEntry">
+        <section id="entry--${entry.id}" class="journalEntryOld">
             <div>${entry.date}</div>
             <div>${entry.concept}</div>
             <div>${entry.text}</div>
