@@ -1,12 +1,11 @@
-/*
- *   Journal data provider for Daily Journal application
- *
- *      Holds the raw data about each entry and exports
- *      functions that other modules can use to filter
- *      the entries for different purposes.
- */
+const eventHub = document.querySelector(".container")
 
-// This is the original data.
+const dispatchStateChangeEvent = () => {
+    const noteStateChangedEvent = new CustomEvent("noteStateChanged")
+
+    eventHub.dispatchEvent(noteStateChangedEvent)
+}
+
 let journal = []
 
 export const getEntries = () => {
@@ -14,10 +13,26 @@ export const getEntries = () => {
         .then(response => response.json())  // Parse as JSON
         .then(parsedEntries => {
             journal = parsedEntries
+            debugger
         })
 }
 
 export const useJournalEntries = () => journal.slice()
+
+
+
+export const saveEntry = entry => {
+    return fetch('http://localhost:8088/entries', {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(entry)
+    })
+    .then(getEntries)
+    .then(dispatchStateChangeEvent)
+}
+
 
 /*
     You export a function that provides a version of the
