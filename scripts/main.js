@@ -3,3 +3,5 @@ NoteForm()
 
 import { EntryListComponent } from './JournalEntryList.js';
 EntryListComponent();
+
+import "./JournalEntryList.js"

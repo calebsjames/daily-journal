@@ -31,4 +31,11 @@ const renderToDom = (entryCollection) => {
         `
         
 }
-    
+
+//listen for "entryStateChanged" event. Reload new elements to DOM
+eventHub.addEventListener("entryStateChanged", event => {
+    if (entryLog.innerHTML !== "") {
+        entryLog.innerHTML = ""
+        EntryListComponent()
+    }
+})

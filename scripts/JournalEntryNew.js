@@ -42,7 +42,6 @@ export const NoteForm = () => {
 
 // Handle browser-generated click event in component
 eventHub.addEventListener("click", clickEvent => {
-    debugger
     if (clickEvent.target.id === "saveEntry") {
         
         //Make a new object representation of a note

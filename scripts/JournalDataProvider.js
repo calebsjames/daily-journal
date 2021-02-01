@@ -1,13 +1,8 @@
 const eventHub = document.querySelector(".container")
 
-const dispatchStateChangeEvent = () => {
-    const noteStateChangedEvent = new CustomEvent("noteStateChanged")
-
-    eventHub.dispatchEvent(noteStateChangedEvent)
-}
-
 let journal = []
 
+//get journal entries from API and parse them into a variable
 export const getEntries = () => {
     return fetch("http://localhost:8088/entries") // Fetch from the API
         .then(response => response.json())  // Parse as JSON
@@ -16,10 +11,18 @@ export const getEntries = () => {
         })
 }
 
-export const useJournalEntries = () => journal.slice()
+
+//returns journal entries sorted by date
+export const useJournalEntries = () => {
+    const sortedByDate = journal.sort(
+        (currentEntry, nextEntry) =>
+            Date.parse(currentEntry.date) - Date.parse(nextEntry.date)
+    )
+    return sortedByDate
+}
 
 
-
+//saves current entry and posts to API
 export const saveEntry = entry => {
     return fetch('http://localhost:8088/entries', {
         method: "POST",
@@ -33,14 +36,9 @@ export const saveEntry = entry => {
 }
 
 
-/*
-    You export a function that provides a version of the
-    raw data in the format that you want
-*/
-// export const useJournalEntries = () => {
-//     const sortedByDate = journal.sort(
-//         (currentEntry, nextEntry) =>
-//             Date.parse(currentEntry.date) - Date.parse(nextEntry.date)
-//     )
-//     return sortedByDate
-// }
+//put new journal entries on the DOM once they've been submitted
+const dispatchStateChangeEvent = () => {
+    const entryStateChangedEvent = new CustomEvent("entryStateChanged")
+
+    eventHub.dispatchEvent(entryStateChangedEvent)
+}
