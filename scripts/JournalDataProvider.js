@@ -13,7 +13,6 @@ export const getEntries = () => {
         .then(response => response.json())  // Parse as JSON
         .then(parsedEntries => {
             journal = parsedEntries
-            debugger
         })
 }
 

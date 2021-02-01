@@ -2,26 +2,31 @@
   "entries": [
     {
       "id": 1,
-      "date": "01/14/2021",
+      "date": "2021-01-14",
       "concept": "HTML & CSS",
       "text": "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
       "mood": "Joyful"
     },
     {
       "id": 2,
-      "date": "01/16/2021",
+      "date": "2021-01-16",
       "concept": "JS",
       "text": "JS files are just great.",
       "mood": "Bashing head against wall"
     },
     {
-      "id": 3
+      "date": "2021-01-01",
+      "text": "Please work already",
+      "concept": "Implementing API to hold archived journal entries",
+      "mood": "rapturous",
+      "id": 6
     },
     {
-      "id": 4
-    },
-    {
-      "id": 5
+      "date": "2021-02-02",
+      "text": "Just need to sort by date",
+      "concept": "Things seem to be working",
+      "mood": "rapturous",
+      "id": 7
     }
   ]
 }
