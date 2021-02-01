@@ -1,14 +1,13 @@
 import { getEntries, useJournalEntries } from "./JournalDataProvider.js"
-import { JournalEntryComponent } from "./JournalEntry.js"
+import { JournalEntryComponent } from "./JournalEntryOld.js"
 
-
+const eventHub = document.querySelector(".container")
 const entryLog = document.querySelector(".journalEntryOld")
 // DOM reference to where all entries will be rendered
 
 
 
 export const EntryListComponent = () => {
-
     getEntries()
         .then(() => {
             const entryArray = useJournalEntries()
