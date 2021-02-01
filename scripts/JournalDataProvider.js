@@ -7,31 +7,26 @@
  */
 
 // This is the original data.
-const journal = [
-    {
-        id: 1,
-        date: "01/14/2021",
-        concept: "HTML & CSS",
-        text: "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
-        mood: "Joyful"
-    }, 
-    {
-        id: 2,
-        date: "01/16/2021",
-        concept: "JS",
-        text: "JS files are just great.",
-        mood: "Bashing head against wall"
-    } 
-]
+let journal = []
+
+export const getEntries = () => {
+    return fetch("http://localhost:8088/entries") // Fetch from the API
+        .then(response => response.json())  // Parse as JSON
+        .then(parsedEntries => {
+            journal = parsedEntries
+        })
+}
+
+export const useJournalEntries = () => journal.slice()
 
 /*
     You export a function that provides a version of the
     raw data in the format that you want
 */
-export const useJournalEntries = () => {
-    const sortedByDate = journal.sort(
-        (currentEntry, nextEntry) =>
-            Date.parse(currentEntry.date) - Date.parse(nextEntry.date)
-    )
-    return sortedByDate
-}
+// export const useJournalEntries = () => {
+//     const sortedByDate = journal.sort(
+//         (currentEntry, nextEntry) =>
+//             Date.parse(currentEntry.date) - Date.parse(nextEntry.date)
+//     )
+//     return sortedByDate
+// }
