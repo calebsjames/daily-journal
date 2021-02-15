@@ -7,7 +7,7 @@ const contentTarget = document.querySelector(".journalEntryNew")
 
 
 
-export const moodSelect = () => {
+export const NoteForm = () => {
     getMoods()
         .then(() => {
             const moodsArray = useMoods()
@@ -81,7 +81,7 @@ eventHub.addEventListener("click", clickEvent => {
             "moodId": journalMood
             // Key/value pairs here
         }
-        // debugger
+        
 
         // Change API state and application state
         saveEntry(newEntry)

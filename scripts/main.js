@@ -1,7 +1,7 @@
 
-import { moodSelect } from './JournalEntryNew.js';
-moodSelect()
-// NoteForm()
+import { NoteForm } from './JournalEntryNew.js';
+
+NoteForm()
 
 // import { getMoods } from './MoodProvider.js';
 // getMoods()

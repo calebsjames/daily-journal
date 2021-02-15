@@ -20,13 +20,6 @@
       "concept": "Implementing API to hold archived journal entries",
       "moodId": 1,
       "id": 6
-    },
-    {
-      "date": "2021-02-16",
-      "text": "Work or I'll shoot",
-      "concept": "Moods",
-      "moodId": "4",
-      "id": 7
     }
   ],
   "moods": [

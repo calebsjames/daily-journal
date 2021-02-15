@@ -35,6 +35,14 @@ export const saveEntry = entry => {
     .then(dispatchStateChangeEvent)
 }
 
+//function to delete note
+export const deleteEntry = id => {
+    return fetch(`http://localhost:8088/entries/${id}`, {
+        method: "DELETE"
+    })
+        // .then(getEntries)
+}
+
 
 //put new journal entries on the DOM once they've been submitted
 const dispatchStateChangeEvent = () => {
