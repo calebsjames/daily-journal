@@ -5,56 +5,54 @@
       "date": "2021-01-14",
       "concept": "HTML & CSS",
       "text": "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
-      "mood": "Joyful"
+      "moodId": 1,
+      "mood": {
+        "id": 1,
+        "label": "Rapturous"
+      }
     },
     {
       "id": 2,
       "date": "2021-01-16",
       "concept": "JS",
       "text": "JS files are just great.",
-      "mood": "Bashing head against wall"
+      "moodId": 4,
+      "mood": {
+        "id": 1,
+        "label": "Ecstatic"
+      }
     },
     {
       "date": "2021-01-01",
       "text": "Please work already",
       "concept": "Implementing API to hold archived journal entries",
-      "mood": "rapturous",
-      "id": 6
+      "moodId": 1,
+      "id": 6,
+      "mood": {
+        "id": 1,
+        "label": "Rapturous"
+      }
+    }
+  ],
+  
+  "moods": [
+    {
+      "id": 1,
+      "mood": "Rapturous"
     },
     {
-      "date": "2021-02-02",
-      "text": "Just need to sort by date",
-      "concept": "Things seem to be working",
-      "mood": "rapturous",
-      "id": 7
+      "id": 2,
+      "mood": "Ecstatic"
     },
     {
-      "date": "2021-02-01",
-      "text": "adfsdfa",
-      "concept": "asas",
-      "mood": "headBashhing",
-      "id": 8
+      "id": 3,
+      "mood": "Joyfull"
     },
     {
-      "date": "2020-12-04",
-      "text": "afsafs",
-      "concept": "adasda",
-      "mood": "headBashhing",
-      "id": 9
-    },
-    {
-      "date": "2020-12-04",
-      "text": "Sort of????",
-      "concept": "Are you working?",
-      "mood": "joyful",
-      "id": 10
-    },
-    {
-      "date": "2020-11-12",
-      "text": "You better work",
-      "concept": "Make things work",
-      "mood": "rapturous",
-      "id": 11
+      "id": 4,
+      "mood": "Bashing head against wall"
     }
   ]
+
+  
 }
