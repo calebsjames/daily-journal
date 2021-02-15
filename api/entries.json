@@ -5,36 +5,30 @@
       "date": "2021-01-14",
       "concept": "HTML & CSS",
       "text": "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
-      "moodId": 1,
-      "mood": {
-        "id": 1,
-        "label": "Rapturous"
-      }
+      "moodId": 1
     },
     {
       "id": 2,
       "date": "2021-01-16",
       "concept": "JS",
       "text": "JS files are just great.",
-      "moodId": 4,
-      "mood": {
-        "id": 1,
-        "label": "Ecstatic"
-      }
+      "moodId": 4
     },
     {
       "date": "2021-01-01",
       "text": "Please work already",
       "concept": "Implementing API to hold archived journal entries",
       "moodId": 1,
-      "id": 6,
-      "mood": {
-        "id": 1,
-        "label": "Rapturous"
-      }
+      "id": 6
+    },
+    {
+      "date": "2021-02-16",
+      "text": "Work or I'll shoot",
+      "concept": "Moods",
+      "moodId": "4",
+      "id": 7
     }
   ],
-  
   "moods": [
     {
       "id": 1,
@@ -53,6 +47,4 @@
       "mood": "Bashing head against wall"
     }
   ]
-
-  
 }

@@ -10,7 +10,7 @@ export const JournalEntryComponent = (entry) => {
             <div><b>Date: </b>${entry.date}</div>
             <div><b>Concept: </b>${entry.concept}</div>
             <div><b>Text: </b>${entry.text}</div>
-            <div><b>Mood: </b>${entry.mood.label}</div>
+            <div><b>Mood: </b>${entry.mood.mood}</div>
         </section>
     `
 }

@@ -4,7 +4,7 @@ let journal = []
 
 //get journal entries from API and parse them into a variable
 export const getEntries = () => {
-    return fetch("http://localhost:8088/entries") // Fetch from the API
+    return fetch("http://localhost:8088/entries?_expand=mood") // Fetch from the API
         .then(response => response.json())  // Parse as JSON
         .then(parsedEntries => {
             journal = parsedEntries
