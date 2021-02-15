@@ -4,7 +4,7 @@ let journal = []
 
 //get journal entries from API and parse them into a variable
 export const getEntries = () => {
-    return fetch("http://localhost:8088/entries") // Fetch from the API
+    return fetch("http://localhost:8088/entries?_expand=mood") // Fetch from the API
         .then(response => response.json())  // Parse as JSON
         .then(parsedEntries => {
             journal = parsedEntries
@@ -33,6 +33,14 @@ export const saveEntry = entry => {
     })
     .then(getEntries)
     .then(dispatchStateChangeEvent)
+}
+
+//function to delete note
+export const deleteEntry = id => {
+    return fetch(`http://localhost:8088/entries/${id}`, {
+        method: "DELETE"
+    })
+        // .then(getEntries)
 }
 
 

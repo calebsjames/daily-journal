@@ -1,11 +1,22 @@
 import { saveEntry } from "./JournalDataProvider.js"
+import { getMoods, useMoods } from "./MoodProvider.js"
 
 const eventHub = document.querySelector(".container")
 const contentTarget = document.querySelector(".journalEntryNew")
 
 
 
-const renderToDom = () => {
+
+export const NoteForm = () => {
+    getMoods()
+        .then(() => {
+            const moodsArray = useMoods()
+            renderToDom(moodsArray)
+        })
+}
+
+
+const renderToDom = (moodsCollection) => 
     contentTarget.innerHTML = `
         <h2>New Entry</h2>
         <button id="saveEntry">Record Journal Entry</button>
@@ -24,19 +35,32 @@ const renderToDom = () => {
                 </fieldset>
                 <fieldset class="fieldSet">
                     <label for="journalMood">Current mood</label>
-                    <select name="journalMood" id="journalMood">                            <option value="rapturous">Rapturous</option>
-                        <option value="ecstatic">Ecstatic</option>
-                        <option value="joyful">Joyful</option>
-                        <option value="headBashhing">Bashing head against wall</option>
+                    <select name="journalMood" id="journalMood">                            
+                        ${moodsCollection.map(
+                            (mood) => {
+                                return `<option value="${ mood.id }">${ mood.mood }</option>`
+                            }
+                        ).join("")
+                    }
                     </select>
                 </fieldset>      
                 </form>
     `
-}
 
-export const NoteForm = () => {
-    renderToDom()
-}
+
+
+
+{/* <option value="rapturous">Rapturous</option>
+                        <option value="ecstatic">Ecstatic</option>
+                        <option value="joyful">Joyful</option>
+                        <option value="headBashhing">Bashing head against wall</option> */}
+
+
+
+
+// export const NoteForm = () => {
+//     renderToDom(moodsArray)
+// }
 
 
 
@@ -49,15 +73,15 @@ eventHub.addEventListener("click", clickEvent => {
         const journalConcepts = document.getElementById("journalConcepts").value
         const journalEntry = document.getElementById("journalEntry").value
         const journalMood = document.getElementById("journalMood").value
-        // const author = document.getElementById("author").value
+        
         const newEntry = {
             "date": journalDate,
             "text": journalEntry,
             "concept": journalConcepts,
-            "mood": journalMood
+            "moodId": journalMood
             // Key/value pairs here
         }
-        // debugger
+        
 
         // Change API state and application state
         saveEntry(newEntry)
