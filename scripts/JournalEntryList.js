@@ -23,8 +23,21 @@ const renderToDom = (entryCollection) => {
 }
 
     entryLog.innerHTML += `
+        <p id="archivedTitle"> Archived Entries</p>
+        <div id="archiveButtons">
         <button id="showEntries">Show Journal Entries</button>
+        <div id="moodRadios">
+            <input type="radio" id="1" name="moodFilter" value="Rapturous">
+            <label for="Rapturous">Rapturious</label>
+            <input type="radio" id="2" name="moodFilter" value="Ecstatic">
+            <label for="Ecstatic">Ecstatic</label>
+            <input type="radio" id="3" name="moodFilter" value="Joyful">
+            <label for="Joyful">Joyful</label>
+            <input type="radio" id="4" name="moodFilter" value="Dreadful">
+            <label for="Dreadful">Bashing head against wall</label>
+        </div>
         <button id="clearEntries">Clear Journal Entries</button>
+        </div>
         <article class="journalEntriesOld">
         ${journalHTMLRepresentation}
         </article>

@@ -19,7 +19,6 @@ export const NoteForm = () => {
 const renderToDom = (moodsCollection) => 
     contentTarget.innerHTML = `
         <h2>New Entry</h2>
-        <button id="saveEntry">Record Journal Entry</button>
             <form class="formField" action="">
                 <fieldset class="fieldSet">
                     <label for="journalDate">Date of Entry</label>
@@ -45,6 +44,7 @@ const renderToDom = (moodsCollection) =>
                     </select>
                 </fieldset>      
                 </form>
+                <button id="saveEntry">Record Journal Entry</button>
     `
 
 

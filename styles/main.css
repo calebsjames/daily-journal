@@ -60,3 +60,22 @@ h1,h2,h3,h4,h5,h6 {
 	border: solid black 2px;
 	margin: 8px 0px;
 }
+
+#djTitle {
+	margin-top: 0px;
+}
+
+#saveEntry {
+	margin: 5px;
+}
+
+#archivedTitle {
+	font-weight: bolder;
+	font-size: larger;
+	text-align: center; 
+}
+
+#archiveButtons {
+	display: flex;
+	justify-content: space-around;
+}
