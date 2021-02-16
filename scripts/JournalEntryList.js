@@ -34,7 +34,7 @@ const renderToDom = (entryCollection) => {
             <input type="radio" id="3" name="moodFilter" value="Joyful">
             <label for="Joyful">Joyful</label>
             <input type="radio" id="4" name="moodFilter" value="Dreadful">
-            <label for="Dreadful">Bashing head against wall</label>
+            <label for="Dreadful">Dreadful</label>
         </div>
         <button id="clearEntries">Clear Journal Entries</button>
         </div>
