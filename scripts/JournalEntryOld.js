@@ -1,4 +1,6 @@
-import { EntryListComponent } from "./JournalEntryList.js"
+import { useJournalEntries } from "./JournalDataProvider.js"
+import { EntryListComponent, renderToDom } from "./JournalEntryList.js"
+
 
 const eventHub = document.querySelector(".container")
 const entryLog = document.querySelector(".journalEntryOld")
@@ -22,6 +24,27 @@ export const JournalEntryComponent = (entry) => {
 }
 
 // debugger
+
+
+//event listener to filter journal entries by mood
+eventHub.addEventListener("moodSelect", moodChosenEvent => {
+        
+        const mood = moodChosenEvent.detail.selectedMood
+        const entries = useJournalEntries()
+        
+
+        const chosenEntries = entries.filter(
+            entryObject => {
+                if (entryObject.mood.mood === mood) {
+                    return true
+                }
+            }
+        ) 
+        console.log(chosenEntries)
+        entryLog.innerHTML = ""
+        renderToDom(chosenEntries)
+    }
+)
 
 
 //listen for "entryStateChanged" event. Reload new elements to DOM
