@@ -68,6 +68,9 @@ h1,h2,h3,h4,h5,h6 {
 
 #saveEntry {
 	margin: 5px;
+	padding: 20px;
+	background-color: darkgray;
+	font-size: x-large;
 }
 
 #archivedTitle {
