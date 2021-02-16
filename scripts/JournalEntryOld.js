@@ -11,7 +11,7 @@ const entryLog = document.querySelector(".journalEntryOld")
 export const JournalEntryComponent = (entry) => {
     
     return `
-        <section id="entry--${entry.id}" class="journalEntryOld">
+        <section id="entry--${entry.id}" class="journalEntryCards">
             <div><b>Date: </b>${entry.date}</div>
             <div><b>Concept: </b>${entry.concept}</div>
             <div><b>Text: </b>${entry.text}</div>
