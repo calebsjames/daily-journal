@@ -15,7 +15,7 @@ export const EntryListComponent = () => {
         })
 }
 
-const renderToDom = (entryCollection) => {
+export const renderToDom = (entryCollection) => {
     let journalHTMLRepresentation = ""
 
     for (const entry of entryCollection) {
